@@ -2,7 +2,8 @@
 
     <test name="functionaltest">
         <packages>
-            <package name="com.restful.automation"/>
+            <package name="com.restful.ui"/>
+            <package name="com.restful.api"/>
         </packages>
     </test>
 </suite> <!-- Suite -->

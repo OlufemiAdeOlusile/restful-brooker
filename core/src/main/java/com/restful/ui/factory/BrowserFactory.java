@@ -1,11 +1,11 @@
-package com.restful.automation.factory;
+package com.restful.ui.factory;
 
 
-import com.restful.automation.model.BrowserManager;
+import com.restful.ui.model.BrowserManager;
 import org.openqa.selenium.WebDriver;
 
 /**
- * @author olufemi on 2021-05-11
+ * @author olufemi
  */
 public class BrowserFactory {
 

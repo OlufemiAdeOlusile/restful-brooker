@@ -1,11 +1,11 @@
-package com.restful.automation.factory;
+package com.restful.ui.factory;
 
-import com.restful.automation.config.ConfigResolver;
-import com.restful.automation.model.BrowserConfig;
+import com.restful.ui.config.ConfigResolver;
+import com.restful.ui.model.BrowserConfig;
 
 
 /**
- * @author olufemi on 2021-05-11
+ * @author olufemi
  */
 class BrowserConfigFactory {
 

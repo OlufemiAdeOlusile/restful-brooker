@@ -1,7 +1,7 @@
-package com.restful.automation.model;
+package com.restful.ui.model;
 
 
-import com.restful.automation.exceptions.RestfulWebException;
+import com.restful.ui.exceptions.WebException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.slf4j.Logger;
@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * @author olufemi on 2021-05-11
+ * @author olufemi
  */
 public class BrowserManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(BrowserManager.class);
@@ -49,7 +49,7 @@ public class BrowserManager {
         if (driver != null) {
             return driver;
         } else {
-            throw new RestfulWebException("Driver is not Instantiated");
+            throw new WebException("Driver is not Instantiated");
         }
     }
 

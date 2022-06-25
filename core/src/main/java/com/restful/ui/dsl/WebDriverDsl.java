@@ -1,6 +1,6 @@
-package com.restful.automation.dsl;
+package com.restful.ui.dsl;
 
-import com.restful.automation.factory.BrowserFactory;
+import com.restful.ui.factory.BrowserFactory;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 /**
- * @author olufemi on 2021-05-11
+ * @author olufemi
  */
 public class WebDriverDsl {
 
@@ -28,8 +28,12 @@ public class WebDriverDsl {
         driver.get(url);
     }
 
-    public static void waitForNewPage(WebElement webElement) {
+    public static void waitForNewPageOrModule(WebElement webElement) {
         waitForElementToBeVisible(webElement);
+    }
+
+    public static String getTitle() {
+       return driver.getTitle();
     }
 
 
@@ -72,8 +76,8 @@ public class WebDriverDsl {
         new WebDriverWait(driver, WAIT_TIMEOUT).until(input -> isVisible(element));
     }
 
-    public static void waitForElementSize(List<WebElement> element ,int previousSize) {
-        new WebDriverWait(driver, WAIT_TIMEOUT).until(input -> element.size() >= previousSize +1);
+    public static void waitForElementSize(List<WebElement> element, int previousSize) {
+        new WebDriverWait(driver, WAIT_TIMEOUT).until(input -> element.size() >= previousSize + 1);
     }
 
     private static boolean clickFromListAndVerifyElementIsVisible(List<WebElement> elements, WebElement conditionalElement, String value) {

@@ -1,12 +1,14 @@
-package com.restful.automation.model;
+package com.restful.ui.model;
 
 /**
- * @author olufemi on 2021-05-11
+ * @author olufemi
  */
 public class BrowserConfig {
 
     private String url;
     private String driverType;
+
+    private String platform;
 
     private BrowserConfig(Builder builder) {
         setUrl(builder.url);
@@ -21,8 +23,16 @@ public class BrowserConfig {
         return driverType;
     }
 
+    String getPlatform() {
+        return platform;
+    }
+
     private void setDriverType(String driverType) {
         this.driverType = driverType;
+    }
+
+    private void setPlatform(String platform) {
+        this.platform = platform;
     }
 
     String getUrl() {
@@ -38,6 +48,8 @@ public class BrowserConfig {
         private String url;
         private String driverType;
 
+        private String platform;
+
         private Builder() {
         }
 
@@ -49,6 +61,11 @@ public class BrowserConfig {
 
         public Builder withDriverType(String driverType) {
             this.driverType = driverType;
+            return this;
+        }
+
+        public Builder withPlatform(String platform) {
+            this.platform = platform;
             return this;
         }
 

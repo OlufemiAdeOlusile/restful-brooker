@@ -1,10 +1,10 @@
-package com.restful.automation.config;
+package com.restful.ui.config;
 
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
 
 /**
- * @author olufemi on 2021-05-11
+ * @author olufemi
  */
 public class ConfigResolver {
 

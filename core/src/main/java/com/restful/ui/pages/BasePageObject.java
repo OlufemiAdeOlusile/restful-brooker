@@ -1,13 +1,13 @@
-package com.restful.automation.pages;
+package com.restful.ui.pages;
 
-import com.restful.automation.config.ConfigResolver;
-import com.restful.automation.factory.BrowserFactory;
+import com.restful.ui.config.ConfigResolver;
+import com.restful.ui.factory.BrowserFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 
 /**
- * @author olufemi on 2021-05-11
+ * @author olufemi
  */
 public abstract class BasePageObject<V> {
 
@@ -24,6 +24,6 @@ public abstract class BasePageObject<V> {
         return (V) this;
     }
 
-    public abstract V waitForPage();
+    public abstract V waitForPageOrModule();
 
 }
